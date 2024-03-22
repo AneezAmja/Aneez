@@ -7,7 +7,7 @@ const NavBar = () => {
   const handleMenuOpen = () => setOpen(!open);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary-dark">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary-dark z-50">
       <div>
         <h3 className="text-primary-content text-2xl font-bold">Aneez Amja</h3>
       </div>
@@ -15,10 +15,10 @@ const NavBar = () => {
       {/* Menu */}
       <nav>
         <ul className="hidden md:flex">
-          <li>Home</li>
-          <li>About</li>
-          <li>Experiences</li>
-          <li>Projects</li>
+          <li className="cursor-pointer hover:text-secondary-light font-medium">Home</li>
+          <li className="cursor-pointer hover:text-secondary-light font-medium">About</li>
+          <li className="cursor-pointer hover:text-secondary-light font-medium">Experiences</li>
+          <li className="cursor-pointer hover:text-secondary-light font-medium">Projects</li>
         </ul>
       </nav>
 
@@ -45,10 +45,10 @@ const NavBar = () => {
               "linear-gradient(45deg, rgb(21, 42, 97), rgb(39, 78, 181))",
           }}
         >
-          <li className="py-6 text-4xl">Home</li>
-          <li className="py-6 text-4xl">About</li>
-          <li className="py-6 text-4xl">Experiences</li>
-          <li className="py-6 text-4xl">Projects</li>
+          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Home</li>
+          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">About</li>
+          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Experiences</li>
+          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Projects</li>
         </ul>
     </div>
   );
