@@ -10,6 +10,7 @@
     body {
         /* @apply bg-[#ABB6D2]; */
         /* @apply bg-[#efeff1]; */
+        @apply bg-primary-dark;
         @apply text-primary-content;
         @apply font-[Inter];
     }
@@ -18,9 +19,5 @@
         @apply text-primary-content; 
         @apply text-xl;
         @apply px-4;
-        @apply cursor-pointer;
-
-        @apply hover:text-secondary-light;
-        
     }
 }
