@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen bg-primary-dark">
+    <div name="home" className="w-full h-screen">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-center h-full">
         <>
           <ReactTyped
@@ -22,8 +22,7 @@ const Home = () => {
             <span className="text-secondary-content">software engineer</span>{" "}
             from London, England. Always open to contributing to great software
             projects, you will find me getting my hands dirty with any piece of
-            software I can get my hands on. Specialising in Typescript, React,
-            Redux, Node and Express
+            software I can get my hands on.
           </p>
 
           <a className="text-xl border-[3px] py-4 px-5 rounded-md border-secondary-content mt-10 text-primary-content cursor-pointer transition-bg duration-300 ease-in-out hover:bg-secondary-content hover:text-copy font-semibold" href="mailto:aneez.amja@gmail.com">
