@@ -25,7 +25,7 @@ const Home = () => {
             software I can get my hands on.
           </p>
 
-          <a className="text-xl border-[3px] py-4 px-5 rounded-md border-secondary-content mt-10 text-primary-content cursor-pointer transition-bg duration-300 ease-in-out hover:bg-secondary-content hover:text-copy font-semibold" href="mailto:aneez.amja@gmail.com">
+          <a className="text-xl border-[3px] py-4 px-5 rounded-md border-secondary-content mt-10 text-primary-content cursor-pointer transition-bg duration-500 ease-in-out hover:bg-secondary-content hover:text-copy font-semibold" href="mailto:aneez.amja@gmail.com">
             Say hi 👋🏾
           </a>
         </>
