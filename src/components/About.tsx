@@ -2,15 +2,12 @@ import React from "react";
 import ListItem from "./ListItem";
 import ProfilePicture from "../assets/DSC03453_LR_FULL_RES-min.jpg";
 
-
 const About = () => {
-
   return (
     <div className="h-4/5 container mx-auto max-w-[1000px] px-8 pb-8">
       <h1 className="text-3xl md:text-[45px] text-secondary-content font-bold md:py-5 relative">
         / about me
         {/* <span className="absolute after:inline-block after:bg-[#233554] after:h-[1px] after:w-300 after:text-#f6cccc after:ml-[70px]"></span> */}
-
       </h1>
 
       <div className="flex justify-between">
@@ -23,33 +20,17 @@ const About = () => {
           </div>
           <div className="flex justify-between w-[300px] py-2 px-4 md:py-5 md:w-1/2">
             <span className="relative">
-              <ListItem>
-                Typescript
-              </ListItem>
-              <ListItem>
-                React
-              </ListItem>
-              <ListItem>
-                Javascript ES6+
-              </ListItem>
-              <ListItem>
-                Angular
-              </ListItem>
+              <ListItem>Typescript</ListItem>
+              <ListItem>React</ListItem>
+              <ListItem>Javascript ES6+</ListItem>
+              <ListItem>Angular</ListItem>
             </span>
 
             <span className="relative">
-              <ListItem>
-                Nodejs
-              </ListItem>
-              <ListItem>
-                ExpressJS
-              </ListItem>
-              <ListItem>
-                Mongodb
-              </ListItem>
-              <ListItem>
-                Python
-              </ListItem>
+              <ListItem>Nodejs</ListItem>
+              <ListItem>ExpressJS</ListItem>
+              <ListItem>Mongodb</ListItem>
+              <ListItem>Python</ListItem>
             </span>
           </div>
           <p className="py-5">
@@ -62,8 +43,12 @@ const About = () => {
             iaculis.
           </p>
         </div>
-        <div className="w-[200px] h-[200px] rounded-full overflow-hidden hidden md:block">
-          <img src={ProfilePicture} alt="" className="w-full h-full object-cover" />
+        <div className="w-[200px] h-[200px] rounded-full overflow-hidden hidden md:block duration-500 ease-in-out transform transition-transform hover:grayscale hover:scale-110">
+          <img
+            src={ProfilePicture}
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
