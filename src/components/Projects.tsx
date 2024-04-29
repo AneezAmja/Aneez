@@ -65,17 +65,19 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    var interval = setInterval(() => {
-      setSelectedProject(
-        (prevProj) => (prevProj + 1) % Object.keys(projects).length,
-      );
-    }, 8000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
+    if (!isMobileView) {
+      var interval = setInterval(() => {
+        setSelectedProject(
+          (prevProj) => (prevProj + 1) % Object.keys(projects).length,
+        );
+      }, 8000);
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }
+  }, [isMobileView]);
+  
   if (isMobileView) {
     return (
       <div className="h-4/5 container px-8">
