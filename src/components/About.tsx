@@ -18,7 +18,7 @@ const About = () => {
             <br />
             Here are some technologies I have been working with:
           </div>
-          <div className="flex justify-between w-[300px] py-2 px-4 md:py-5 md:w-1/2">
+          <div className="flex justify-between w-full py-2 px-4 md:py-5 lg:w-[80%]">
             <span className="relative">
               <ListItem>Typescript</ListItem>
               <ListItem>React</ListItem>
@@ -31,6 +31,9 @@ const About = () => {
               <ListItem>ExpressJS</ListItem>
               <ListItem>Mongodb</ListItem>
               <ListItem>Flutter</ListItem>
+            </span>
+            <span className="relative">
+              <ListItem>PHP/Laravel</ListItem>
             </span>
           </div>
           <p className="py-5">
