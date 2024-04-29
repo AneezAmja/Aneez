@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import useIsMobileView from "../util/useIsMobileView";
 
 const projects = {
   ecom: {
@@ -47,11 +48,7 @@ const projects = {
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevIndex =
-    (currentIndex - 1 + Object.keys(projects).length) %
-    Object.keys(projects).length;
-  const nextIndex = (currentIndex + 1) % Object.keys(projects).length;
+  const isMobileView = useIsMobileView();
 
   const goToPreviousImage = () => {
     const prevIndex =
@@ -79,6 +76,29 @@ const Projects = () => {
     };
   }, []);
 
+  if (isMobileView) {
+    return (
+      <div className="h-4/5 container px-8">
+
+      <h1 className="text-3xl  text-secondary-content font-bold py-5 relative">
+      / projects
+    </h1>
+      <div className="flex flex-col items-center pb-8"> 
+        {Object.keys(projects).map((key, i) => (
+          <div key={i} className="mb-12"> 
+            <img src={projects[key].image} alt="" className="w-full rounded-lg" />
+            <h2 className="text-center my-3 text-[#fefefe] text-xl lowercase font-bold">{projects[key].title}</h2> 
+            <p className="text-center text-[#fefefe] text-sm font-medium">{projects[key].desc}</p>
+            <p className="text-center text-secondary-content text-sm font-bold pt-3">{projects[key].techStack}</p>
+          </div>
+        ))}
+
+      </div>
+      </div>
+    );
+  }
+  
+
   return (
     <div className="h-full container mx-auto max-w-[1000px] px-8">
       <h1 className="text-3xl md:text-[45px] text-secondary-content font-bold md:py-5 relative">
@@ -86,7 +106,7 @@ const Projects = () => {
       </h1>
 
       <div className="h-[500px] overflow-hidden relative rounded-2xl mt-6">
-        <div className="absolute inset-0 flex">
+        <div className={`${isMobileView ? "absolute inset-0 flex" : "grid grid-cols-5"}`}>
           {Object.keys(projects).map((key, i) => (
             <div
               key={i}
@@ -118,7 +138,9 @@ const Projects = () => {
               </div>
             </div>
           ))}
-          <button
+    {!isMobileView && (
+      <>
+      <button
             className="absolute top-1/2 left-0 transform -translate-y-1/2  p-2 text-secondary-content text-5xl"
             onClick={goToPreviousImage}
           >
@@ -130,6 +152,22 @@ const Projects = () => {
           >
             <FaAngleRight />
           </button>
+      </>
+      )}
+          {/* 
+          <button
+            className="absolute top-1/2 left-0 transform -translate-y-1/2  p-2 text-secondary-content text-5xl"
+            onClick={goToPreviousImage}
+          >
+            <FaAngleLeft />
+          </button>
+          <button
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-secondary-content text-5xl"
+            onClick={goToNextImage}
+          >
+            <FaAngleRight />
+          </button> 
+          */}
         </div>
       </div>
     </div>
