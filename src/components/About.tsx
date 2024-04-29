@@ -30,7 +30,7 @@ const About = () => {
               <ListItem>Nodejs</ListItem>
               <ListItem>ExpressJS</ListItem>
               <ListItem>Mongodb</ListItem>
-              <ListItem>Python</ListItem>
+              <ListItem>Flutter</ListItem>
             </span>
           </div>
           <p className="py-5">
