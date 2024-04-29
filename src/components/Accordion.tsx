@@ -4,8 +4,14 @@ const jobs = [
   {
     company: "Vertu Motors",
     description: [
-      "Test 1.",
-      "Test 2.",
+      `Working amongst a team of front-end developers alongside designers using React, TypeScript,
+      JavaScript, Angular, HTML, CSS(BEM/SMACCS)/SCSS and gulp to maintain Vertu Motor’s
+      14 websites.`,
+      `Implementing data layers that are crucial to the business for learning the usage patterns for our
+      avg. 200 thousand daily visitors.`, 
+      `Responsible for leading the daily stand-up for a sub team, ensuring any blockers were removed
+      from the team.`,
+      `Ensured best practices in our codebase through pair-programming and periodic code-reviews.`,
     ],
     jobTitle: "Web Developer @",
     duration: "AUG 2021 - AUG 2023",
@@ -13,8 +19,9 @@ const jobs = [
   {
     company: "5and3",
     description: [
-      "Test 3.",
-      "Test 4.",
+      `Utilised PHP, Backpack for Laravel, and Database abstraction through eloquent.`,
+      `Worked with tools like Webpack and Bower`,
+      `Familiar with using Linux based systems.`
     ],
     jobTitle: "Trainee Developer @",
     duration: "MAR 2020 - JUN 2021",
@@ -22,8 +29,11 @@ const jobs = [
   {
     company: "Grandad Digital",
     description: [
-      "Test 5.",
-      "Test 6.",
+      `Proficient in HTML5, CSS3 and JavaScript, and have developed for WordPress based websites.
+      Able to use CSS pre-processors like SASS and SCSS.`,
+      `Conducting cross-browser and responsive testing in order to ensure style are similar across
+      browsers, if not then was my duty to fix said issues.`,
+      `Familiarity with using Google Analytics, Google Tag Manager and Google Data Studio.`,
     ],
     jobTitle: "Apprentice Developer @",
     duration: "OCT 2018 - OCT 2019",
@@ -38,7 +48,7 @@ const Accordion: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-[300px] pt-3">
+    <div className="flex flex-col md:flex-row pt-3">
       {/* Company column */}
       <div className="flex flex-col w-1/2 md:w-1/4 py-4 md:p-0">
         {jobs.map((job, index) => (
@@ -75,7 +85,7 @@ const Accordion: React.FC = () => {
               {job.description.map((desc, i) => (
                 <li
                   key={i}
-                  className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-base list-none py-2"
+                  className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
                 >
                   {desc}
                 </li>
