@@ -45,10 +45,10 @@ const NavBar = () => {
               "linear-gradient(45deg, rgb(21, 42, 97), rgb(39, 78, 181))",
           }}
         >
-          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Home</li>
-          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">About</li>
-          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Experiences</li>
-          <li className="py-6 text-4xl cursor-pointer hover:text-secondary-light">Projects</li>
+          <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">Home</li>
+          <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">About</li>
+          <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">Experiences</li>
+          <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">Projects</li>
         </ul>
     </div>
   );
