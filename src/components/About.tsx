@@ -50,7 +50,7 @@ const About = () => {
           <FadeIn>
             <p className="py-5">
               Outside of work I am a highly competitive individual when it comes to sports, I frequently part take in a 5
-              aside football match every week. I also am an avid gamer - cant beat getting lost in a new world!
+              aside football match every week. I also am an avid gamer - cant beat getting lost in a new world! Current favourite is RDR2 🤠🐎 
             </p>
           </FadeIn>
         </div>
