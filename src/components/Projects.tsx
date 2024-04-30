@@ -103,7 +103,7 @@ const Projects = () => {
               <div key={i} className="mb-12">
                 <img
                   src={projects[key].image}
-                  alt=""
+                  alt={projects[key].desc}
                   className="w-full rounded-lg"
                 />
                 <h2 className="text-center my-3 text-[#fefefe] text-xl lowercase font-bold">
@@ -145,7 +145,7 @@ const Projects = () => {
                   <div className="absolute inset-0"></div>
                   <img
                     src={projects[key].image}
-                    alt=""
+                    alt={projects[key].desc}
                     className="w-full h-full"
                   />
 
