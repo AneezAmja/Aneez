@@ -106,9 +106,31 @@ const Projects = () => {
                   alt={projects[key].desc}
                   className="w-full rounded-lg"
                 />
+                <div className="flex items-center justify-center">
+
                 <h2 className="text-center my-3 text-[#fefefe] text-xl lowercase font-bold">
                   {projects[key].title}
                 </h2>
+                <div className="text-[#fefefe]  flex justify-center">
+                        {projects[key].githubLink && (
+                          <a
+                            className="pointer pr-4 pl-4 z-50"
+                            href={projects[key].githubLink}
+                          >
+                            <FaGithub />
+                          </a>
+                        )}
+                        {projects[key].liveLink && (
+                          <a
+                            className="pointer z-50"
+                            href={projects[key].liveLink}
+                          >
+                            <FaUpload />
+                          </a>
+                        )}
+                      </div>
+
+                </div>
                 <p className="text-center text-[#fefefe] text-sm font-medium">
                   {projects[key].desc}
                 </p>
