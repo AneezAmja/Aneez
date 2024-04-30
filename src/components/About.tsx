@@ -3,8 +3,11 @@ import ListItem from "./ListItem";
 import FadeIn from "./FadeIn";
 // @ts-ignore
 import ProfilePicture from "../assets/DSC03453_LR_FULL_RES-min.jpg";
+import useIsMobileView from "../util/useIsMobileView";
 
 const About = () => {
+  const isMobileView = useIsMobileView();
+
   return (
     <div className="h-4/5 container mx-auto max-w-[1000px] px-8 pb-8">
       <FadeIn>
@@ -54,7 +57,7 @@ const About = () => {
             </p>
           </FadeIn>
         </div>
-        <FadeIn duration={1200} dir="right">
+        <FadeIn duration={1200} dir={isMobileView ? 'up' : 'right'}>
           <div className="w-[200px] h-[200px] rounded-full overflow-hidden hidden md:block duration-500 ease-in-out transform transition-transform hover:grayscale hover:scale-110 cursor-pointer">
             <img
               src={ProfilePicture}

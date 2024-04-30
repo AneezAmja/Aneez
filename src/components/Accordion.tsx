@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FadeIn from "./FadeIn";
+import useIsMobileView from "../util/useIsMobileView";
 
 const jobs = [
   {
@@ -43,6 +44,7 @@ const jobs = [
 
 const Accordion: React.FC = () => {
   const [selectedJob, setSelectedJob] = useState<string>(jobs[0].company);
+  const isMobileView = useIsMobileView();
 
   const toggleAccordion = (jobName: string) => {
     setSelectedJob((prevJob) => (prevJob === jobName ? prevJob : jobName));
@@ -85,7 +87,7 @@ const Accordion: React.FC = () => {
 
             <ul>
               {job.description.map((desc, i) => (
-            <FadeIn duration={1500} dir="right">
+            <FadeIn duration={1500} dir={isMobileView ? 'up' : 'right'}>
                 <li
                 key={i}
                 className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
