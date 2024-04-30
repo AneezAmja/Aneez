@@ -46,11 +46,11 @@ const projects = {
   },
   coursework: {
     title: "rocketz",
-    desc: "A 2D game where you battle against enemy rocket ships in waves.",
+    desc: "A 2D game waved based survival game where your rocket ship is battling enemy rocket ships.",
     techStack: "JAVA",
     link: "https://github.com/AneezAmja/ecommerce-project",
     open: "https://ecommerce-project-bay.vercel.app/products",
-    image: "/src/assets/spotify.png",
+    image: "/src/assets/rocketz.jpg",
     githubLink: null,
     liveLink: null,
   },
