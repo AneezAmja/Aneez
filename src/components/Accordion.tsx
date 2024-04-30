@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FadeIn from "./FadeIn";
 
 const jobs = [
   {
@@ -44,7 +45,7 @@ const Accordion: React.FC = () => {
   const [selectedJob, setSelectedJob] = useState<string>(jobs[0].company);
 
   const toggleAccordion = (jobName: string) => {
-    setSelectedJob((prevJob) => (prevJob === jobName ? '' : jobName));
+    setSelectedJob((prevJob) => (prevJob === jobName ? prevJob : jobName));
   };
 
   return (
@@ -81,14 +82,17 @@ const Accordion: React.FC = () => {
               </h1>
             </div>
             <div className="text-base font-light pt-2">{job.duration}</div>
+
             <ul>
               {job.description.map((desc, i) => (
+            <FadeIn duration={1500} dir="right">
                 <li
-                  key={i}
-                  className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
+                key={i}
+                className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
                 >
                   {desc}
                 </li>
+              </FadeIn>
               ))}
             </ul>
           </div>
