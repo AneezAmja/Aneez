@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen">
+    <div id="home" className="w-full h-screen">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center items-center h-full">
         <>
           <ReactTyped

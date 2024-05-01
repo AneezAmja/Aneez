@@ -7,7 +7,7 @@ const Experience = () => {
 
 
   return (
-    <div className="h-max-content md:h-4/5 container mx-auto max-w-[1000px] px-8">
+    <div id="experencies" className="h-max-content md:h-4/5 container mx-auto max-w-[1000px] px-8">
 
       <FadeIn>
     <h1 className="text-3xl md:text-[45px] text-secondary-content font-bold md:py-5 relative">

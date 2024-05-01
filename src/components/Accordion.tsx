@@ -87,9 +87,8 @@ const Accordion: React.FC = () => {
 
             <ul>
               {job.description.map((desc, i) => (
-            <FadeIn duration={1500} dir={isMobileView ? 'up' : 'right'}>
+            <FadeIn duration={1500} dir={isMobileView ? 'up' : 'right'}  key={i}>
                 <li
-                key={i}
                 className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
                 >
                   {desc}

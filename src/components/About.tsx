@@ -9,7 +9,7 @@ const About = () => {
   const isMobileView = useIsMobileView();
 
   return (
-    <div className="h-4/5 container mx-auto max-w-[1000px] px-8 pb-8">
+    <div id="about" className="h-4/5 container mx-auto max-w-[1000px] px-8 pb-8">
       <FadeIn>
         <h1 className="text-3xl md:text-[45px] text-secondary-content font-bold md:py-5 relative">
           / about me

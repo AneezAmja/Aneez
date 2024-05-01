@@ -91,7 +91,7 @@ const Projects = () => {
 
   if (isMobileView) {
     return (
-      <div className="h-4/5 container px-8">
+      <div id='projects' className="h-4/5 container px-8">
         <FadeIn>
           <h1 className="text-3xl  text-secondary-content font-bold py-5 relative">
             / projects
@@ -146,7 +146,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="h-full container mx-auto max-w-[1000px] px-8">
+    <div id='projects' className="h-full container mx-auto max-w-[1000px] px-8">
       <FadeIn>
         <h1 className="text-3xl md:text-[45px] text-secondary-content font-bold md:py-5 relative">
           / projects
