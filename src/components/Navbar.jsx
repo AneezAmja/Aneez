@@ -22,17 +22,17 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="cursor-pointer hover:text-secondary-light font-medium">
-            <Link to="about" smooth={true} duration={500}  offset={-80}>
+            <Link to="about" smooth={true} duration={500}  offset={-83}>
               About
             </Link>
           </li>
           <li className="cursor-pointer hover:text-secondary-light font-medium">
-            <Link to="experencies" smooth={true} duration={500} offset={-80}>
+            <Link to="experencies" smooth={true} duration={500} offset={-83}>
               Experencies
             </Link>
           </li>
           <li className="cursor-pointer hover:text-secondary-light font-medium">
-            <Link to="projects" smooth={true} duration={500} offset={-80}>
+            <Link to="projects" smooth={true} duration={500} offset={-83}>
               Projects
             </Link>
           </li>
@@ -70,19 +70,19 @@ const NavBar = () => {
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="about" smooth={true} duration={500} offset={-80}>
+          <Link to="about" smooth={true} duration={500} offset={-83}>
             About
           </Link>
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="experencies" smooth={true} duration={500} offset={-80}>
+          <Link to="experencies" smooth={true} duration={500} offset={-83}>
             Experencies
           </Link>
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="projects" smooth={true} duration={500} offset={-80}>
+          <Link to="projects" smooth={true} duration={500} offset={-83}>
             Projects
           </Link>
         </li>
