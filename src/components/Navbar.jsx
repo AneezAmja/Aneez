@@ -3,9 +3,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
+
   const [open, setOpen] = useState(false);
 
-  const handleMenuOpen = () => setOpen(!open);
+  const toggleMenu = () => setOpen(!open);
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary-dark z-50">
@@ -41,7 +42,7 @@ const NavBar = () => {
 
       {/* Hamburger */}
 
-      <div className="md:hidden z-10 cursor-pointer" onClick={handleMenuOpen}>
+      <div className="md:hidden z-10 cursor-pointer" onClick={toggleMenu}>
         {!open ? (
           <FaBars className="text-primary-content" />
         ) : (
@@ -64,25 +65,25 @@ const NavBar = () => {
       >
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="home" smooth={true} duration={500}>
+          <Link to="home" smooth={true} duration={500} onClick={toggleMenu}>
             Home
           </Link>
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="about" smooth={true} duration={500} offset={-83}>
+          <Link to="about" smooth={true} duration={500} offset={-83} onClick={toggleMenu}>
             About
           </Link>
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="experencies" smooth={true} duration={500} offset={-83}>
+          <Link to="experencies" smooth={true} duration={500} offset={-83} onClick={toggleMenu}>
             Experencies
           </Link>
         </li>
         <li className="py-6 text-3xl cursor-pointer hover:text-secondary-light">
           {" "}
-          <Link to="projects" smooth={true} duration={500} offset={-83}>
+          <Link to="projects" smooth={true} duration={500} offset={-83} onClick={toggleMenu}>
             Projects
           </Link>
         </li>
