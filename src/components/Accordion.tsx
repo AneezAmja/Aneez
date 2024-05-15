@@ -45,9 +45,11 @@ const jobs = [
 const Accordion: React.FC = () => {
   const [selectedJob, setSelectedJob] = useState<string>(jobs[0].company);
   const isMobileView = useIsMobileView();
+  const [fadeKey, setFadeKey] = useState<number>(0);
 
   const toggleAccordion = (jobName: string) => {
     setSelectedJob((prevJob) => (prevJob === jobName ? prevJob : jobName));
+    setFadeKey(prevKey => prevKey + 1)
   };
 
   return (
@@ -87,7 +89,7 @@ const Accordion: React.FC = () => {
 
             <ul>
               {job.description.map((desc, i) => (
-            <FadeIn duration={1500} dir={isMobileView ? 'up' : 'right'}  key={i}>
+            <FadeIn duration={1500} dir={isMobileView ? 'up' : 'right'} key={`${job.company}-${i}-${fadeKey}`}>
                 <li
                 className="before:content-['▹'] before:text-[30px] before:absolute before:left-[-8px] before:text-secondary-content text-sm md:text-base list-none py-2"
                 >
